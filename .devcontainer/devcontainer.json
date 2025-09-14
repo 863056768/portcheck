@@ -4,5 +4,8 @@
     "dockerfile": "Dockerfile"
   },
   "runArgs": ["--network=host"],
-  "postCreateCommand": "make && ./portcheck 8082"
+  "postCreateCommand": {
+    "make": ["sudo", "make"],
+    "run": ["sudo", "./portcheck", "8082"]
+  }
 }
