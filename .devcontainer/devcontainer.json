@@ -5,7 +5,9 @@
   },
   "runArgs": ["--network=host"],
   "postCreateCommand": {
-    "make": ["sudo", "make"],
+    "build": ["sudo", "make"]
+  },
+  "postStartCommand": {
     "run": ["sudo", "./portcheck", "8082"]
   }
 }
